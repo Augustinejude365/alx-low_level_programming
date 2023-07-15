@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main -A programe that prints a line using the  printf function
- * Retuen:0 (if the program executes successfully, else a positive integer)
+ * Return: 0 (if the program executes successfully, else a positive integer)
  */
 int main(void)
 {
