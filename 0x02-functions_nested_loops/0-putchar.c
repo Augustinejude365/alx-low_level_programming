@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main - Entry point
- * Description: 'Prints _putchar to stdout'
+ * main int _putchar(char)  - Entry point
+ * Description: 'Prints _putchar to stdout. is written by Jude
  * Return: Always 0
  */
 int main(void)
@@ -14,6 +14,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-	_pitchar('\n');
+	_putchar('\n');
 	return (0);
 }
