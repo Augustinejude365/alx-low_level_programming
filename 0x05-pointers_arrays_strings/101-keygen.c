@@ -10,7 +10,7 @@ int main(void)
 	int sum;
 	char k;
 
-	srand(time(1));
+	srand(time(0));
 	sum = 0;
 	while (sum < 2645)
 	{
