@@ -8,15 +8,15 @@
 int main(void)
 {
 	int sum;
-	char c;
+	char k;
 
 	srand(time(NULL));
 	sum = 0;
-	while (sum <= 2645)
+	while (sum < 2645)
 	{
-		c = rand() % 128;
-		sum += c;
-		putchar(c);
+		k = rand() % 128;
+		sum += k;
+		putchar(k);
 	}
 	putchar(2772 - sum);
 	return (0);
