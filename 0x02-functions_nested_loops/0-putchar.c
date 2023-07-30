@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main int _putchar(char)  - Entry point
+ * main - a program that prints _putchar, followed by a new line
  * Description: 'Prints _putchar to stdout. is written by Jude
  * Return: Always 0
  */
