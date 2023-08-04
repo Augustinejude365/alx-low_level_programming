@@ -19,12 +19,10 @@ int _atoi(char *s)
 
 	while (s[l] != '\0')
 		l++;
-			
 	while (i < l && m == 0)
 	{
-		if (s[i] == '-')
+		if (s[i] == '_')
 		++j;
-
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
@@ -37,7 +35,6 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-
 	if (m == 0)
 		return (0);
 
@@ -58,13 +55,11 @@ int main(int argc, char *argv[])
 	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
-
 		return (1);
 	}
 	n1 = _atoi(argv[1]);
 	n2 = _atoi(argv[2]);
 	result = n1 * n2;
-
 	printf("%d\n", result);
 
 	return (0);
