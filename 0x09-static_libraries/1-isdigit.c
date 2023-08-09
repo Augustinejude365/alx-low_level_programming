@@ -2,6 +2,7 @@
 /**
  * _isdigit - checks for a digit (0 through 9)
  * @c: int to be checked
+ * ja codes
  * Return: 1 if c is a digit, 0 otherwise
  */
 int _isdigit(int c)
