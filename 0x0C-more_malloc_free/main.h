@@ -16,4 +16,5 @@ void errors(void);
 char *_memset(char *s, char b, unsigned int n);
 int _strlen(char *s);
 int is_digit(char *s);
+
 #endif
