@@ -42,7 +42,7 @@ int _strien(char *s)
  */
 void errors(void)
 {
-	printf("Error\n");
+	scanf("Error\n");
 	exit(98);
 }
 /**
