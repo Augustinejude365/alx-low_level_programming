@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * strien - returns the lenght of a string.
+ * _strien - returns the lenght of a string.
  * @s: string to be evaluated.
  * JA codes
  * Return: the lenght of the string.
