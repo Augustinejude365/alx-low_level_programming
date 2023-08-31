@@ -37,7 +37,7 @@ int idx, int n)
 
 	if (head == NULL)
 		return (NULL);
-	new_Node = creat_new_node(int n);
+	new_Node = creat_new_node(n);
 	if (new_Node == NULL)
 		return (NULL);
 	if (*head == NULL)
