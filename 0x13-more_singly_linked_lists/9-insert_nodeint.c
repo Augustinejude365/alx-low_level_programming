@@ -1,15 +1,15 @@
 #include "lists.h"
 /**
- * creat_a_new_node - a function that creates a new node.
+ * creat_new_node - a function that creates a new node.
  * @n: input data of the new mode
  * Writtwn Jude Augustine.
  * Return: pointser to the node.
  */
-listint_t *creat_a_new_node(int n)
+listint_t *creat_new_node(int n)
 {
 	listint_t *new_Node;
 
-	new_Node = malloc(sizeof(listint_t)
+	new_Node = malloc(sizeof(listint_t));
 	if (new_Node == NULL)
 	return (NULL);
 	new_Node->n = n;
@@ -28,16 +28,16 @@ listint_t *creat_a_new_node(int n)
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned
 int idx, int n)
 {
-	unsigne int k;
-	list_t *temp_Node;
-	listint *temp_old_Node;
-	listm_j *new_Node;
+	unsigned int k;
+	listint_t *temp_Node;
+	listint_t *temp_old_Node;
+	listint_t *new_Node;
 
 	temp_Node = *head;
 
 	if (head == NULL)
 		return (NULL);
-	new_Node = create_a_new_node(n);
+	new_Node = creat_new_node(int n);
 	if (new_Node == NULL)
 		return (NULL);
 	if (*head == NULL)
@@ -57,7 +57,7 @@ int idx, int n)
 		new_Node->next = temp_Node;
 	else
 	{
-		temp_old_Node = twmp_Node->next;
+		temp_old_Node = temp_Node->next;
 			temp_Node->next = new_Node;
 			new_Node->next = temp_old_Node;
 	}
