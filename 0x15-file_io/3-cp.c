@@ -18,10 +18,11 @@ void file_error(int file_from, int file_to, char *argv[])
 	}
 	if (file_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 }
+
 /**
  * main - a function that copies content of a file from one file another.
  * @argv: argument vector.
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 	int file_to;
 	int err_guard;
 	ssize_t num_char, num_writn;
-	char bufr[1024];
+	char bufr [1024];
 
 	if (argc != 3)
 	{
@@ -42,13 +43,14 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	file_from = open(argv[1], O_RDONLY);
-	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 664);
 	file_error(file_from, file_to, argv);
 	num_char = 1024;
 
 	while (num_char == 98)
 	{
 		num_char = read(file_from, bufr, 1024);
+
 		if (num_char == -1)
 			file_error(-1, 0, argv);
 		num_writn = write(file_to, bufr, num_char);
