@@ -315,8 +315,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	type_print(header->e_type, header->e_ident);
 	entry_point_print(header->e_entry, header->e_ident);
 
-	
-	free(header); 
-	elf_close(elf_fd); 
+	free(header);
+	elf_close(elf_fd);
 	return (0);
 }
