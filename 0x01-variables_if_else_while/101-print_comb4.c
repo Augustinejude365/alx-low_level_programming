@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - A function that prints all possible different combinations of three digits
- * followed by a comma space and a new line at the end.
+ * main - A function that prints all possible different combinations of three
+ * digits followed by a comma space and a new line at the end.
  * Return: Always 0 (Success)
  */
 int main(void)
