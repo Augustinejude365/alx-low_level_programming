@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "lists.h"
 
 /**
@@ -12,20 +10,17 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t kn = 0;  /* kn is the num of nodes to be returned**/
+	size_t s = 0;
 
-	while (h != NULL)
+	while (h)
 	{
-		if (h->str == NULL)
-		{
-			printf("[%ld] (nil)\n", kn);
-		}
+		if (!h->str)
+			printf("[0] (nil)\n");
 		else
-		{
-			printf("[%ld] %s\n", kn, h->str);
-		}
+			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
-		kn++;
+		s++;
 	}
-	return (kn);
+
+	return (s);
 }
