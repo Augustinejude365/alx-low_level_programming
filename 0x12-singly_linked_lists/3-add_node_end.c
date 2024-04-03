@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -12,30 +10,36 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_Node, *new_Node_end;
-	size_t k;
+	list_t *temp, *temp2;
+	unsigned int length = 0;
 
-	new_Node = malloc(sizeof(list_t));
-	if (new_Node == NULL)
+	if (str == NULL)
 		return (NULL);
-	new_Node->str = strdup(str);
-	for (k = 0; str[k]; k++)
-		;
-	new_Node->len = k;
-	new_Node->next = NULL;
-	new_Node_end = *head;
 
-	if (new_Node_end == NULL)
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
+		return (NULL);
+
+	temp->str = strdup(str);
+	if (temp->str == NULL)
 	{
-		*head = new_Node;
+		free(temp);
+		return (NULL);
 	}
-	else
+	while (str[length])
+		length++;
+	temp->len = length;
+	temp->next = NULL;
+
+	if (*head == NULL)
 	{
-		while (new_Node_end->next != NULL)
-			new_Node_end = new_Node_end->next;
-		new_Node_end->next = new_Node;
+		*head = temp;
+		return (temp);
 	}
-	return (*head);
+
+	temp2 = *head;
+	while (temp2->next)
+		temp2 = temp2->next;
+	temp2->next = temp;
+	return (temp);
 }
-
-
